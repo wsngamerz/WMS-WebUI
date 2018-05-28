@@ -1,0 +1,41 @@
+.button {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    border: 0.1em solid;
+    border-radius: 0.3em;
+    color: $colour-white;
+    margin: 1em;
+
+    &.button-success {
+        background-color: $colour-green;
+        border-color: $colour-green;
+
+        &:hover {
+            background-color: darken($colour-green, $static-colour-change);
+        }
+    }
+
+    &.button-info {
+        background-color: $colour-blue;
+        border-color: $colour-blue;
+
+        &:hover {
+            background-color: darken($colour-blue, $static-colour-change);
+        }
+    }
+
+    &.block {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.button-group {
+    display: block;
+    width: 100%;
+    text-align: center;
+}

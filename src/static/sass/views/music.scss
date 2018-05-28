@@ -1,0 +1,89 @@
+.songlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin-bottom: $size-height-player-music;
+    padding: 1em;
+
+    .song {
+        position: relative;
+        background-color: green;
+
+        .song-cover,
+        .song-more {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .song-cover {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .song-details {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1vw;
+            color: $colour-white;
+            background-color: rgba(70, 70, 70, 0.7 );
+
+            .song-name,
+            .song-artist,
+            .song-album {
+                display: block;
+            }
+
+            .song-name {
+                font-weight: 900;
+                font-size: 1.2em;
+            }
+
+            .song-artist,
+            .song-album {
+                font-weight: 300;
+                font-size: 0.8em;
+            }
+        }
+
+        .song-more {
+            font-size: 8em;
+            color: $colour-white;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            visibility: hidden;
+
+            .icon {
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            .song-details {
+                display: none;
+                visibility: hidden;
+            }
+
+            .song-more {
+                display: flex;
+                visibility: visible;
+            }
+        }
+    }
+
+    .song::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+}

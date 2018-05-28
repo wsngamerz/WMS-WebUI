@@ -1,0 +1,118 @@
+.navbar {
+    width: 100%;
+    display: block;
+    background-color: $colour-primary;
+
+    .nav-link-container {
+        display: none;
+        visibility: hidden;
+        float: left;
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+        visibility: visible;
+    }
+
+    .nav-brand {
+        float: left;
+        color: $colour-white;
+        display: inline-block;
+        font-size: 1em;
+        text-decoration: none;
+        padding: 1em;
+        &:hover {
+            background-color: darken($colour-primary, $static-colour-change);
+            cursor: pointer;
+        }
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        float: left;
+        color: $colour-white;
+        font-size: 1em;
+        text-decoration: none;
+        padding: 1em;
+        &:hover {
+            background-color: darken($colour-primary, $static-colour-change);
+            cursor: pointer;
+        }
+    }
+
+    .nav-account,
+    .nav-search,
+    .nav-toggle {
+        display: inline-block;
+        font-size: 1.5em;
+        padding: 0.5em;
+        color: $colour-white;
+
+        &:hover {
+            background-color: darken($colour-primary, $static-colour-change);
+            cursor: pointer;
+        }
+    }
+
+    .nav-toggle {
+        float: left;
+    }
+
+    .nav-account {
+        float: right;
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-search {
+        float: right;
+        display: none;
+        visibility: hidden;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// Media Queries to handle nav resizing
+
+@media (min-width: 480px) {
+    .navbar {
+        .nav-account {
+            float: right;
+            display: block;
+            visibility: visible;
+        }
+
+        .nav-search {
+            float: right;
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    .navbar {
+        .icon-menu {
+            display: none;
+        }
+
+        .nav-link-container {
+            display: inline-block;
+            visibility: visible;
+            width: initial;
+        }
+
+        .nav-link {
+            display: inline-block;
+            visibility: visible;
+            width: initial;
+        }
+    }
+}

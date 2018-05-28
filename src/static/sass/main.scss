@@ -1,0 +1,22 @@
+//
+// Main SCSS styles
+//
+
+// Main
+
+@import "variables";
+@import "defaults";
+@import "typography";
+
+// Components
+
+@import "components/footer";
+@import "components/navigation";
+@import "components/player";
+@import "components/icons";
+@import "components/button";
+
+// views
+
+@import "views/home";
+@import "views/music";

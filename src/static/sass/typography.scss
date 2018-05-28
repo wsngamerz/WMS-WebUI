@@ -1,0 +1,18 @@
+.title {
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+    color: $colour-text;
+    display: block;
+    margin: 2em;
+}
+
+@media (max-width: 720px) {
+    .title {
+        margin: 1em;
+    }
+}
+
+.subtitle {
+    font-size: 2.5em;
+}

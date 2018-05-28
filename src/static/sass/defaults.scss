@@ -1,0 +1,63 @@
+//
+// Import Roboto Font
+//
+
+// Light
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Regular
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Black
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+//
+// Import Material Icons
+//
+
+@font-face {
+    font-family: "Material Icons";
+    src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot);
+    src: local("Material Icons"), local("MaterialIcons-Regular"),
+        url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format("woff"),
+        url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+//
+// Set Defaults
+//
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    font-family: "Roboto", Helvetica, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: $font-size;
+}
