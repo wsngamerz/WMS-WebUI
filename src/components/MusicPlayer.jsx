@@ -73,7 +73,7 @@ class MusicPlayer extends Component {
         let button = document.getElementsByClassName("playpause")[0];
         const mediaLocation = window.location.protocol + "//" + window.location.hostname + "/media/";
         const coverLocation = mediaLocation + "covers/" + this.state.current.img;
-        const audioLocation = mediaLocation + "song/" + this.state.current.id;
+        const audioLocation = mediaLocation + "song/" + this.state.current.id + "?format=mp3";
         spanName.innerHTML = this.state.current.name;
         spanArtist.innerHTML = this.state.current.artist;
         spanAlbum.innerHTML = this.state.current.album;
