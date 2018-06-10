@@ -6,8 +6,9 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
     entry: "./src/index.js",
     output: {
-        path: path.join(__dirname, "/dist", "static", "js"),
-        filename: "main.js"
+        path: path.join(__dirname, "/dist"),
+        publicPath: "/static",
+        filename: "js/main.js"
     },
     resolve: {
         extensions: [".web.js", ".mjs", ".js", ".json", ".web.jsx", ".jsx"],
@@ -58,7 +59,7 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "static/fonts/",
+                            outputPath: "fonts/",
                             publicPath: "/static/fonts/"
                         }
                     }
@@ -71,18 +72,18 @@ module.exports = {
             template: "./src/static/html/index.html"
         }),
         new ExtractTextPlugin({
-            filename: "static/css/bundle.css"
+            filename: "css/bundle.css"
         }),
         new CopyWebpackPlugin(
             [
                 {
                     from: "src/static/img/*",
-                    to: "static/img/",
+                    to: "img/",
                     flatten: true
                 },
                 {
                     from: "src/static/manifests/*",
-                    to: "static/manifests/",
+                    to: "manifests/",
                     flatten: true
                 }
             ],
